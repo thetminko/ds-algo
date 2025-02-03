@@ -6,12 +6,12 @@ export class Queue<T> {
 
   enqueue(item: T) {
     this._items.unshift(item);
-    return this;
+    return this._items;
   }
 
   dequeue() {
-    this._items.splice(0, 1);
-    return this;
+    const deleted = this._items.splice(0, 1);
+    return deleted[0];
   }
 
   values() {

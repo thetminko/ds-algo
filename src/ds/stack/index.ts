@@ -15,8 +15,11 @@ export class Stack<T> {
   }
 
   pop() {
-    this._items.pop();
-    return this;
+    return this._items.pop();
+  }
+
+  shift() {
+    return this._items.shift();
   }
 
   find(val: T) {
