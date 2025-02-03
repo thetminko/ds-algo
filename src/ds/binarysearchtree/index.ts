@@ -1,5 +1,4 @@
 import { Queue } from '../queue';
-import { Stack } from '../stack';
 import { Node } from './Node';
 
 export class BinarySearchTree<T> {
