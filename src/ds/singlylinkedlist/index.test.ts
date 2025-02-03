@@ -33,5 +33,6 @@ test("SinglyLinkedList", () => {
   list.insert(10, 0);
   expect(list.traverse()).toStrictEqual([10, 4, 3, 5, 2, 1]);
 
-  expect(() => list.insert(10, 10)).toThrow("Invalid index");
+  list.insert(100, 100);
+  expect(list.traverse()).toStrictEqual([10, 4, 3, 5, 2, 1, 100]);
 });
