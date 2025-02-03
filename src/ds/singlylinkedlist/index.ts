@@ -31,6 +31,11 @@ export class SinglyLinkedList<T> {
   }
 
   insert(value: T, idx?: number) {
+    idx = idx ?? 0;
+    if (idx < 0) {
+      return;
+    }
+
     if (this._size === 0 || idx === undefined) {
       this.add(value);
       return;
@@ -62,6 +67,39 @@ export class SinglyLinkedList<T> {
 
     this._size++;
     return this;
+  }
+
+  remove(idx: number) {
+    if (idx < 0) {
+      return;
+    }
+
+    if (!this._head) {
+      return;
+    }
+
+    if (idx === 0) {
+      this._head = this._head.next();
+      this._size--;
+      return;
+    }
+
+    const prevNode = this.findByIdx(idx - 1);
+    if (!prevNode) {
+      return;
+    }
+
+    if (idx === this._size - 1) {
+      prevNode.setNext(null);
+      this._tail = prevNode;
+      this._size--;
+      return;
+    }
+
+    const nextNode = this.findByIdx(idx + 1);
+    prevNode.setNext(nextNode ?? null);
+    this._size--;
+    return;
   }
 
   traverse() {

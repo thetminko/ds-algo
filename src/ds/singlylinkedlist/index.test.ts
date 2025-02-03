@@ -35,4 +35,7 @@ test("SinglyLinkedList", () => {
 
   list.insert(100, 100);
   expect(list.traverse()).toStrictEqual([10, 4, 3, 5, 2, 1, 100]);
+
+  list.remove(6);
+  expect(list.traverse()).toStrictEqual([10, 4, 3, 5, 2, 1]);
 });
