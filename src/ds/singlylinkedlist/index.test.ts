@@ -24,4 +24,6 @@ test("SinglyLinkedList", () => {
   expect(list.findByIdx(0)?.value()).toBe(4);
   expect(list.findByIdx(1)?.value()).toBe(3);
   expect(list.findByIdx(10)?.value()).toBeUndefined();
+
+  expect(list.findByValue(1)).toBeDefined();
 });

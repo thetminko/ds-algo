@@ -58,7 +58,6 @@ export class SinglyLinkedList<T> {
 
   findByIdx(idx: number) {
     if (idx < 0 || idx > this._size - 1) {
-      console.log("idx out of range");
       return null;
     }
 
@@ -80,6 +79,19 @@ export class SinglyLinkedList<T> {
 
       node = node.next();
       idxCounter++;
+    }
+
+    return null;
+  }
+
+  findByValue(value: T) {
+    let node = this._head;
+    while (!!node) {
+      if (node.value() === value) {
+        return node;
+      }
+
+      node = node.next();
     }
 
     return null;
