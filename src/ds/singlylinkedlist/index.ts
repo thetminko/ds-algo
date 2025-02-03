@@ -30,11 +30,34 @@ export class SinglyLinkedList<T> {
     this._size++;
   }
 
+  insert(value: T, idx: number) {
+    const idxNode = this.findByIdx(idx);
+    if (!idxNode)  {
+      throw new Error("Invalid index");
+    }
+
+    const node = new Node<T>(value);
+
+    if (idx === 0) {
+      this._head = node;
+      this._head.setNext(idxNode);
+    } else if (idx === this._size - 1) {
+      this._tail = node;
+      idxNode.setNext(this._tail);
+    } else {
+      const prevNode = this.findByIdx(idx - 1);
+      prevNode!.setNext(node);
+      node.setNext(idxNode);
+    }
+
+    return this;
+  }
+
   traverse() {
     let node = this._head;
     const values: T[] = [];
     while (!!node) {
-      values.push(node.value());
+      values.push(node.value()!);
       node = node.next();
     }
 

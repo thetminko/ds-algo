@@ -26,4 +26,12 @@ test("SinglyLinkedList", () => {
   expect(list.findByIdx(10)?.value()).toBeUndefined();
 
   expect(list.findByValue(1)).toBeDefined();
+
+  list.insert(5, 2);
+  expect(list.traverse()).toStrictEqual([4, 3, 5, 2, 1]);
+
+  list.insert(10, 0);
+  expect(list.traverse()).toStrictEqual([10, 4, 3, 5, 2, 1]);
+
+  expect(() => list.insert(10, 10)).toThrow("Invalid index");
 });
