@@ -9,6 +9,7 @@
     "module": "esnext",
     "target": "esnext",
     "lib": [
+      "DOM",
       "esnext"
     ],
     "declaration": true,
