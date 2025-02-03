@@ -17,4 +17,8 @@ export class Queue<T> {
   values() {
     return this._items;
   }
+
+  size() {
+    return this._items.length;
+  }
 }

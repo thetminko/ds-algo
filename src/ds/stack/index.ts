@@ -5,7 +5,7 @@ export class Stack<T> {
     this._items = items;
   }
 
-  get size() {
+  size() {
     return this._items.length;
   }
 
