@@ -5,7 +5,7 @@ export class Queue<T> {
   }
 
   enqueue(item: T) {
-    this._items.unshift(item);
+    this._items.push(item);
     return this._items;
   }
 

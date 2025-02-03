@@ -6,8 +6,8 @@ test('Queue', () => {
   expect(queue.values()).toStrictEqual([1, 2, 3]);
 
   queue.enqueue(100);
-  expect(queue.values()).toStrictEqual([100, 1, 2, 3]);
+  expect(queue.values()).toStrictEqual([1, 2, 3, 100]);
 
-  expect(queue.dequeue()).toBe(100);
-  expect(queue.values()).toStrictEqual([1, 2, 3]);
+  expect(queue.dequeue()).toBe(1);
+  expect(queue.values()).toStrictEqual([2, 3, 100]);
 })

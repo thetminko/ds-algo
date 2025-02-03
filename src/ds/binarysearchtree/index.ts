@@ -1,3 +1,4 @@
+import { Queue } from '../queue';
 import { Stack } from '../stack';
 import { Node } from './Node';
 
@@ -90,25 +91,22 @@ export class BinarySearchTree<T> {
       return result;
     }
 
-    const stack = new Stack<Node<T>| null>([this._root]);
-    while (stack.size() > 0) {
-      const node = stack.shift();
+    const queue = new Queue<Node<T>| null>([this._root]);
+    while (queue.size() > 0) {
+      const node = queue.dequeue();
       if (!node) {
         continue;
       }
 
       result.push(node.value());
-      console.log(result);
 
       if (node.left()) {
-        stack.push(node.left());
+        queue.enqueue(node.left());
       }
 
       if (node.right()) {
-        stack.push(node.right());
+        queue.enqueue(node.right());
       }
-
-      console.log(stack.values())
     }
     return result;
   }
