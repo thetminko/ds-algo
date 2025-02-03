@@ -1,7 +1,7 @@
-import { expect, test } from "vitest";
-import { SinglyLinkedList } from "./index";
+import { expect, test } from 'vitest';
+import { SinglyLinkedList } from './index';
 
-test("SinglyLinkedList", () => {
+test('SinglyLinkedList', () => {
   const list = new SinglyLinkedList<number>();
   expect(list.head()).toStrictEqual(null);
 

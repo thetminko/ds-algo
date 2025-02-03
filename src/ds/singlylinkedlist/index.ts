@@ -1,4 +1,4 @@
-import { Node } from "./Node";
+import { Node } from './Node';
 
 export class SinglyLinkedList<T> {
   private _head: Node<T> | null = null;
@@ -49,9 +49,8 @@ export class SinglyLinkedList<T> {
       return;
     }
 
-
     const idxNode = this.findByIdx(idx);
-    if (!idxNode)  {
+    if (!idxNode) {
       this.add(value);
       return;
     }
@@ -110,7 +109,7 @@ export class SinglyLinkedList<T> {
       node = node.next();
     }
 
-    return values
+    return values;
   }
 
   reverse() {
@@ -118,7 +117,7 @@ export class SinglyLinkedList<T> {
     let prev = null;
     let next = null;
 
-    while(!!current) {
+    while (!!current) {
       next = current?.next();
       current?.setNext(prev);
       prev = current;

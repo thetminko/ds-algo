@@ -1,7 +1,7 @@
-import { expect, test } from "vitest";
-import { Stack } from "./index";
+import { expect, test } from 'vitest';
+import { Stack } from './index';
 
-test("Stack", () => {
+test('Stack', () => {
   const stack = new Stack<number>([1, 2, 3]);
   expect(stack.values()).toStrictEqual([1, 2, 3]);
   expect(stack.size()).toBe(3);

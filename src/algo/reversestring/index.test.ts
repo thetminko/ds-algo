@@ -1,5 +1,5 @@
-import { test, expect } from "vitest";
-import { reverseForLoop, reversePointers } from "./index";
+import { test, expect } from 'vitest';
+import { reverseForLoop, reversePointers } from './index';
 
 test('Reverse using pointers function exists', () => {
   expect(reversePointers).toBeDefined();

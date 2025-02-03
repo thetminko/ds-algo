@@ -29,5 +29,4 @@ export class Stack<T> {
   values() {
     return this._items;
   }
-
 }

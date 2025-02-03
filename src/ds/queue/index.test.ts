@@ -10,4 +10,4 @@ test('Queue', () => {
 
   expect(queue.dequeue()).toBe(1);
   expect(queue.values()).toStrictEqual([2, 3, 100]);
-})
+});

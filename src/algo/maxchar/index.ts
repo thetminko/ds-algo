@@ -24,4 +24,3 @@ export function maxChar(str: string) {
 
   return maxChar.char;
 }
-

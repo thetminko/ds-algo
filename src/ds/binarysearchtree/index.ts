@@ -46,7 +46,7 @@ export class BinarySearchTree<T> {
       result.push(node.value());
       traverse(node.left());
       traverse(node.right());
-    }
+    };
 
     traverse(this._root);
     return result;
@@ -62,7 +62,7 @@ export class BinarySearchTree<T> {
       traverse(node.left());
       result.push(node.value());
       traverse(node.right());
-    }
+    };
 
     traverse(this._root);
     return result;
@@ -78,7 +78,7 @@ export class BinarySearchTree<T> {
       traverse(node.left());
       traverse(node.right());
       result.push(node.value());
-    }
+    };
 
     traverse(this._root);
     return result;
@@ -90,7 +90,7 @@ export class BinarySearchTree<T> {
       return result;
     }
 
-    const queue = new Queue<Node<T>| null>([this._root]);
+    const queue = new Queue<Node<T> | null>([this._root]);
     while (queue.size() > 0) {
       const node = queue.dequeue();
       if (!node) {

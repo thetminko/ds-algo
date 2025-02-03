@@ -16,4 +16,3 @@ export function reverseInt(n: number) {
 
   return parseInt(reversed) * Math.sign(n);
 }
-

@@ -1,4 +1,4 @@
-import { test, expect } from "vitest";
+import { test, expect } from 'vitest';
 import { palindrome } from './index';
 
 test('palindrome function is defined', () => {
@@ -32,5 +32,3 @@ test('"Fish hsif" is not a palindrome', () => {
 test('"pennep" a palindrome', () => {
   expect(palindrome('pennep')).toBeTruthy();
 });
-
-

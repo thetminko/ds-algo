@@ -1,7 +1,7 @@
-import { expect, test } from "vitest";
-import { BinarySearchTree } from "./index";
+import { expect, test } from 'vitest';
+import { BinarySearchTree } from './index';
 
-test("BinarySearchTree", () => {
+test('BinarySearchTree', () => {
   const bst = new BinarySearchTree<number>();
 
   bst.insert(5);

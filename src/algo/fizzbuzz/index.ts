@@ -35,4 +35,3 @@ export function fizzBuzz(n: number) {
 function isMultipleOf(num: number, multipleOf: number) {
   return num % multipleOf === 0;
 }
-
