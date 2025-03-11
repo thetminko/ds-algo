@@ -54,3 +54,6 @@ What is the purpose of package.json in Node.js?
 Answer:
 
 It contains metadata about the project (name, version, scripts, dependencies). Manages dependencies and allow task automation
+
+# Context
+ Context is a built-in feature that provides a way to share values (like state, themes, authentication status, etc.) between components without having to pass props manually at every level. It helps avoid "prop drilling", where you pass data through multiple levels of components unnecessarily.
